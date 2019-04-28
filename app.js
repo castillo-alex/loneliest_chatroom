@@ -10,7 +10,7 @@ let id = 0
 const date = new Date().toLocaleTimeString()
 
 
-console.log("this is working")
+// console.log("this is working")
 form.addEventListener("submit", handleSubmit)
 joke.addEventListener("click", tellJoke)
 // deleteButton.addEventListener("click", deleteMessage)
@@ -33,8 +33,8 @@ function createMessage(sender, msgInput) {
     <div class="col-1">${sender}</div>
     <div class="col-7">${msgInput}</div>
     <div class="col-2">
-      <button type="button" class="col-1 close delete" aria-label="Close">
-        <span id="delete${id}" aria-hidden="true">&times;</span>
+      <button onclick="deleteMessage(${id})" type="button" class="col-1 close delete" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
       </button>
     </div>
   </div>`
@@ -42,8 +42,12 @@ function createMessage(sender, msgInput) {
   chatbox.scrollTop = chatbox.scrollHeight
 }
 
-function deleteMessage() {
-  console.log("delete")
+function deleteMessage(id) {
+  if(confirm("Delete Message?")) {
+    const message = document.getElementById(id)
+    message.remove()
+  }
+  // console.log("delete")
   // if(confirm("Are you sure?")) {
   //   const message = document.getElementById(id)
   //   message.remove()
@@ -51,7 +55,7 @@ function deleteMessage() {
 }
 
 function tellJoke() {
-  console.log("tell a joke!")
+  // console.log("tell a joke!")
   fetch('https://api.icndb.com/jokes/random')
   .then(response => response.json())
   .then(json => createMessage('Fact', json.value.joke))
