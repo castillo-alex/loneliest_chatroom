@@ -5,13 +5,12 @@ body {
 }
 
 * {
-  color: #F75D59;
+  color: #154360;
 }
 
 #header {
-
   background-color: rgba(122, 109, 107, 0.4);
-  width: 58em;
+  /* width: 58em; */
 }
 
 /* .table {
@@ -22,25 +21,25 @@ body {
 } */
 
 
-div#chat-box {
+#chat-box {
   background-color: rgba(122, 109, 107, 0.4);
-   /* height: 300px;
-  width: 100px;
-   margin: 0; */
+  height: 400px;
+  /* width: 58em; */
+  margin: 0;
+  /* border: 1px solid black; */
+  overflow-y: scroll;
+  align-content: end;
 }
 
-#chat-box .user-input {
-   /* display: grid;  */
-  border: 1px solid black;
-}
-
-
-/* .row {
-  margin-left: 0;
-  margin-right: 0;
-} */
-
-#chat-box div.user-input.row {
-  border: 1px solid black;
+.user-input {
+  /* border: 1px solid black; */
   margin: 0;
 }
+
+.user-input:hover {
+  background-color: #F08080;
+}
+
+/* #chat-box div.user-input.row {
+  border: 1px solid black;
+} */
