@@ -5,7 +5,7 @@ body {
 }
 
 * {
-  color: #154360;
+  color: rgb(247, 249, 249);
 }
 
 #header {
@@ -37,7 +37,7 @@ body {
 }
 
 .user-input:hover {
-  background-color: #F08080;
+  background-color: rgb(128, 139, 150);
 }
 
 /* #chat-box div.user-input.row {
